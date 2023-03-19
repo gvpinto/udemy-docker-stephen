@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    # look for the Dockerfile in the current directory
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - /app/node_modules
+      # . means $(pwd)
+      - .:/app

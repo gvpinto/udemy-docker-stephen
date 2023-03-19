@@ -47,6 +47,9 @@ We suggest that you begin by typing:
 ### Running the container
 `docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app piercingstripes/react-app-1`
 
+### Running docker compose
+`docker compose up`
+
 
 
 
