@@ -91,7 +91,12 @@ build image on the default docker file
 
 `docker build .`
 
-`docker run -p 8080:80 <image id>`
+`docker run -p 8080:80 <image id>`  
+
+Run from root
+`docker build -f ./section6/frontend/Dockerfile.dev -t piercingstripes/docker-react ./section6/frontend/`
+
+
 
 
 
