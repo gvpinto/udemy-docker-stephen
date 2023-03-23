@@ -14,7 +14,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t piercingstripes/docker-react -f Dockerfile.dev
+    - docker build -t piercingstripes/docker-react -f Dockerfile.dev .
 
 script:
     - docker run -e CI=true piercingstripes/docker-react npm run test
