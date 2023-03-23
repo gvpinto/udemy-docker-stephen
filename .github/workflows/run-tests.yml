@@ -1,7 +1,7 @@
 name: Test
 on:
   pull_request:
-  #push: { branches: master }
+  push: { branches: feature }
 
 env:
   TEST_TAG: ${{ secrets.DOCKER_USERNAME }}/docker-react:test
@@ -34,4 +34,4 @@ jobs:
       -
         name: Test
         run: |
-          docker run --rm ${{ env.TEST_TAG }}
+          docker run --rm ${{ env.TEST_TAG }} npm run test
