@@ -27,4 +27,4 @@ jobs:
           context: ./section7/frontend
           file: ./section7/frontend/Dockerfile
           push: true
-          tags: user/app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/docker-react:latest
