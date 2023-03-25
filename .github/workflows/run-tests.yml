@@ -1,4 +1,4 @@
-name: Test
+name: Test Docker React
 on:
   pull_request:
   push: { branches: feature }
