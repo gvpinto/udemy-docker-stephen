@@ -1,6 +1,11 @@
 FROM node:16-alpine
-WORKDIR /app
-COPY ./package.json ./
+USER node
+RUN mkdir -p /home/node/app
+WORKDIR /home/node/app
+COPY --chown=node:node ./package.json ./
 RUN npm install
-COPY . .
+# To resolve a permission error during recompile
+#RUN mkdir node_modules/.cache && chmod -R 777 node_modules/.cache
+COPY --chown=node:node ./ ./
+# RUN chown -R node:node ./node_modules
 CMD ["npm", "run", "start"]
